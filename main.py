@@ -23,30 +23,30 @@ if devmode == False:
 ██████████               ███████████████
 ████████████████████████████████████████
             B GAME STUDIOS              ''' + colorama.Style.RESET_ALL)
-time.sleep(2)
-clear()
-print(colorama.Fore.WHITE, colorama.Back.CYAN)
-print(r'     _____                          ____   _____ ')
-time.sleep(0.2)
-print(r'    / ____|                        / __ \ / ____|')
-time.sleep(0.2)
-print(r'   | (___  _ __   ___  __ _ _ __  | |  | | (___  ')
-time.sleep(0.2)
-print(r'    \___ \|  _ \ / _ \/ _  |  __| | |  | |\___ \ ')
-time.sleep(0.2)
-print(r'    ____) | |_) |  __| (_| | |    | |__| |____) |')
-time.sleep(0.2)
-print(r'   |_____/|  __/ \___|\____|_|     \____/|_____/ ')
-time.sleep(0.2)
-print(r'          | |                                    ')
-time.sleep(0.2)
-print(r'          |_|     _____________________________  ')
-time.sleep(0.2)
-print(r'                 |POWERED BY PYTHON AND REPL.IT| ')
-time.sleep(0.2)
-print(r'                  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  ')
-
-time.sleep(2)
+    time.sleep(2)
+    clear()
+    print(colorama.Fore.WHITE, colorama.Back.CYAN)
+    print(r'     _____                          ____   _____ ')
+    time.sleep(0.2)
+    print(r'    / ____|                        / __ \ / ____|')
+    time.sleep(0.2)
+    print(r'   | (___  _ __   ___  __ _ _ __  | |  | | (___  ')
+    time.sleep(0.2)
+    print(r'    \___ \|  _ \ / _ \/ _  |  __| | |  | |\___ \ ')
+    time.sleep(0.2)
+    print(r'    ____) | |_) |  __| (_| | |    | |__| |____) |')
+    time.sleep(0.2)
+    print(r'   |_____/|  __/ \___|\____|_|     \____/|_____/ ')
+    time.sleep(0.2)
+    print(r'          | |                                    ')
+    time.sleep(0.2)
+    print(r'          |_|     _____________________________  ')
+    time.sleep(0.2)
+    print(r'                 |POWERED BY PYTHON AND REPL.IT| ')
+    time.sleep(0.2)
+    print(r'                  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  ')
+    print('Version 1.0')
+    time.sleep(2)
 print(colorama.Back.GREEN +
         'Setting up Spear OS...                           ' +
         colorama.Style.RESET_ALL)
@@ -804,11 +804,12 @@ def main():
         print(
             str(ptime.month) + "/" + str(ptime.day) + "/" + str(
                 ptime.year),
-            str(curhour) + ":" + minute, aorp, 'GMT')
+            str(curhour) + ":" + minute, aorp)
         print('Dev mode:', str(devmode))
         print('Host OS type:', os.name)
         print('S. Shut down')
         print('P. Pause')
+        print('R. Restart')
         print(colorama.Back.CYAN + colorama.Fore.WHITE +
                 '                  -⌂-                 ')
         print(colorama.Fore.BLUE + colorama.Back.GREEN +
@@ -834,6 +835,8 @@ def main():
         elif inp == "3":
             clear()
             cmd()
+        elif inp == 'R':
+            os.execl(sys.executable, sys.executable, * sys.argv)
         elif inp == "S":
             clear()
             sys.exit()

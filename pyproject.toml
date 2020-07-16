@@ -1,12 +1,13 @@
 [tool.poetry]
-name = "spear-os-beta"
+name = "spear-os"
 version = "0.1.0"
-description = ""
+description = "The best Python-driven OS around"
 authors = ["B Game Studios <bgamestudios@mail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 colorama = "^0.4.3"
+pyfiglet = "^0.8.post1"
 
 [tool.poetry.dev-dependencies]
 

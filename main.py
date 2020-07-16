@@ -1,4 +1,5 @@
 devmode = True
+#Top
 import time, colorama, os
 
 def clear():
@@ -45,16 +46,21 @@ if devmode == False:
     print(r'                 |POWERED BY PYTHON AND REPL.IT| ')
     time.sleep(0.2)
     print(r'                  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  ')
-    print('Version 1.0')
+    print('Version 1.1')
     time.sleep(2)
 print(colorama.Back.GREEN +
         'Setting up Spear OS...                           ' +
         colorama.Style.RESET_ALL)
 print('[Importing libraries]')
-import socket, datetime, sys, random, requests
+import socket, datetime, sys, random, requests, contextlib, pyfiglet
 print(colorama.Fore.GREEN + '[Done]' + colorama.Style.RESET_ALL)
 print('[Defining functions]')
-
+def figlet():
+    print('Enter the text:')
+    txt = input('>')
+    f = pyfiglet.Figlet(font='standard')
+    print(f.renderText(txt))
+    cont = input('Press Enter to exit')
 def cmd():
     try:
         print("Host Command Line")
@@ -821,6 +827,7 @@ def main():
         print("| 5. XDecoder     | 6. Calculator    |")
         print("| 7. S.A.F.A.R.I. | 8. Storytime     |")
         print("| 9. Load App     | 10. Download App |")
+        print("| 11. Text Art    |                  |")
         print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
         print("")
         print(colorama.Style.RESET_ALL)
@@ -859,14 +866,15 @@ def main():
             extapp()
         elif inp == "10":
             dlapp()
+        elif inp == "11":
+            figlet()
         else:
             clear()
     main()
-
 if devmode == False:
     print(colorama.Fore.GREEN + '[Done]')
     print('Spear OS is ready' + colorama.Style.RESET_ALL)
     start = input("Press Enter to continue to Home")
 main()
-
 clear()
+#Bottom

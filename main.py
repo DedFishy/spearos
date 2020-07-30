@@ -52,7 +52,7 @@ print(colorama.Back.GREEN +
         'Setting up Spear OS...                           ' +
         colorama.Style.RESET_ALL)
 print('[Importing libraries]')
-import socket, datetime, sys, random, requests, contextlib, pyfiglet
+import socket, datetime, sys, random, requests, pyfiglet
 print(colorama.Fore.GREEN + '[Done]' + colorama.Style.RESET_ALL)
 print('[Defining functions]')
 def figlet():

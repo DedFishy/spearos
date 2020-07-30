@@ -8,6 +8,7 @@ authors = ["B Game Studios <bgamestudios@mail.com>"]
 python = "^3.8"
 colorama = "^0.4.3"
 pyfiglet = "^0.8.post1"
+selectmenu = "^1.0.0b2"
 
 [tool.poetry.dev-dependencies]
 
